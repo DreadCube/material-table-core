@@ -21,6 +21,13 @@ const createStore = (props) =>
           mergedLocalization.dateTimePickerLocalization;
         mergedLocalization.body.filterRow.dateTimePickerLocalization =
           mergedLocalization.dateTimePickerLocalization;
+
+          mergedLocalization.body.filterRow.dateTimePickerDateFnsUtils =
+          mergedLocalization.dateTimePickerDateFnsUtils;
+
+          mergedLocalization.body.filterRow.dateTimePickerLocales =
+          mergedLocalization.dateTimePickerLocales;
+
         if (!equal(mergedLocalization, nextLocalization)) {
           return { localization: mergedLocalization };
         } else {

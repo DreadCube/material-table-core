@@ -453,6 +453,13 @@ export interface Localization {
   error?: React.ReactNode;
   body?: {
     dateTimePickerLocalization?: object; // The date-fns locale object applied to the datepickers
+    dateTimePickerDateFnsUtils?: DateFnsUtils; // The used date fns utils applied to the datepickers
+    dateTimePickerLocales?: {
+      format?: string; // the locale format
+      cancelLabel?: string; // the cancel label of the datepickers
+      clearLabel?: string; // the clear label of the datepickers
+      okLabel?: string; // the ok label of the datepickers
+    };
     emptyDataSourceMessage?: React.ReactNode;
     filterRow?: {
       filterPlaceHolder?: React.ReactNode;
