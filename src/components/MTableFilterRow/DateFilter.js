@@ -21,7 +21,8 @@ function DateFilter({
     value: columnDef.tableData.filterValue || null,
     onChange: onDateInputChange,
     placeholder: getLocalizedFilterPlaceHolder(columnDef),
-    clearable: true
+    clearable: true,
+    ...localization.dateTimePickerLocales
   };
 
   let dateInputElement = null;
@@ -35,7 +36,7 @@ function DateFilter({
 
   return (
     <MuiPickersUtilsProvider
-      utils={DateFnsUtils}
+      utils={localization.dateTimePickerDateFnsUtils || DateFnsUtils}
       locale={localization.dateTimePickerLocalization}
     >
       {dateInputElement}
